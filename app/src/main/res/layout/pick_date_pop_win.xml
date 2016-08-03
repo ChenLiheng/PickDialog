@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/shadow_line"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:background="#f0f4f7">
+
+        <TextView
+            android:id="@+id/pick_pop_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:text="取消"
+            android:background="@drawable/btn_selector"
+            android:layout_centerVertical="true"
+            android:textColor="#5e6061" />
+
+        <TextView
+            android:id="@+id/pick_pop_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:text="确定"
+            android:background="@drawable/btn_selector"
+            android:layout_centerVertical="true"
+            android:autoText="false"
+            android:textColor="#5e6061" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <info.devnote.pickdialog.weight.PickerView
+                android:id="@+id/pv_year"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="年"
+                android:textColor="#5e6061"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <info.devnote.pickdialog.weight.PickerView
+                android:id="@+id/pv_month"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/pv_month"
+                android:text="月"
+                android:textColor="#5e6061"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <info.devnote.pickdialog.weight.PickerView
+                android:id="@+id/pv_day"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/pv"
+                android:text="日"
+                android:textColor="#5e6061"
+                android:textSize="26sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e5e9e8"
+        android:layout_alignTop="@id/ll_calendar"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e5e9e8"
+        android:layout_alignTop="@id/ll_calendar"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>
