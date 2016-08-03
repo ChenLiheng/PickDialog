@@ -2,6 +2,7 @@ package info.devnote.pickdialog;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
@@ -28,6 +29,17 @@ public class MainActivity extends Activity {
                 int year = 2000;
                 int month = 1;
                 int day = 1;
+                String birthday = mTimeContent.getText().toString();
+
+                if (!TextUtils.isEmpty(birthday)) {
+                    try {
+                        year = Integer.valueOf(birthday.split("-")[0]);
+                        month = Integer.valueOf(birthday.split("-")[1]);
+                        day = Integer.valueOf(birthday.split("-")[2]);
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
                 PickDatePopupWindow pickDatePopupWindow = new PickDatePopupWindow(MainActivity.this, year, month, day);
                 pickDatePopupWindow.setDatePickListener(new PickDatePopupWindow.DatePickListener() {
                     @Override
